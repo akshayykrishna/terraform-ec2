@@ -40,12 +40,12 @@ provider "aws" {
 
 # Launch an EC2 instance
 resource "aws_instance" "example" {
-  ami           = "ami-0eb38b817b93460ac"   # Amazon Linux 2 AMI (update per region)
-  instance_type = "t2.micro"                # Free tier eligible
+  ami           = "ami-01edba92f9036f76e"   # Amazon Linux 2 AMI (update per region)
+  instance_type = "t3.micro"                # Free tier eligible
   key_name      = "mobaxterm"
 
 # Use the default security group  
-  vpc_security_group_ids = ["sg-0db484edc0a0c070e"]
+  vpc_security_group_ids = ["sg-0fd44f05e93915df3"]
 
   tags = {
     Name = "terrainstance"
